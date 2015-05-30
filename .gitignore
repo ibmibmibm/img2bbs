@@ -26,3 +26,7 @@
 *.exe
 *.out
 *.app
+
+# Build environment
+build
+img2bbs
