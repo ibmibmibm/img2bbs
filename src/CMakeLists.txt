@@ -26,3 +26,12 @@ target_compile_features(img2bbs PRIVATE
     cxx_template_template_parameters
 )
 target_link_libraries(img2bbs ${OpenCV_LIBS} ${FREETYPE_LIBRARIES})
+
+add_executable(gen_table gen_table.cpp)
+target_compile_features(gen_table PRIVATE cxx_nullptr)
+add_executable(gen_wide gen_wide.cpp)
+target_compile_features(gen_wide PRIVATE cxx_nullptr cxx_range_for)
+
+add_executable(test_video test_video.cpp)
+target_compile_features(test_video PRIVATE cxx_nullptr cxx_range_for)
+target_link_libraries(test_video ${OpenCV_LIBS})
